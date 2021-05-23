@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rejobs/models/Job.dart';
+import 'package:rejobs/models/job.dart';
+import 'package:rejobs/widgets/image_network.dart';
 
 class JobCard extends StatelessWidget {
   final Job job;
@@ -8,22 +9,6 @@ class JobCard extends StatelessWidget {
 
   const JobCard({Key key, @required this.job, @required this.onClickCard})
       : super(key: key);
-
-  Widget _image(String imageUrl) {
-    return Container(
-      margin: EdgeInsets.only(top: 10, left: 8),
-      width: 40,
-      height: 40,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-            image: imageUrl != null
-                ? NetworkImage(imageUrl)
-                : AssetImage("assets/work_grey.png")),
-        color: Colors.grey[200],
-        borderRadius: BorderRadius.all(Radius.circular(4.0)),
-      ),
-    );
-  }
 
   Widget _title(String text) {
     return Padding(
@@ -80,7 +65,7 @@ class JobCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            _image(job.companyLogoUrl),
+            ImageNetwork(imageUrl: job.companyLogoUrl),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

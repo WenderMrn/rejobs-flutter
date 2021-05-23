@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rejobs/screens/home/HomeScreen.dart';
+import 'package:rejobs/screens/home/home_screen.dart';
 
 void main() {
   runApp(ReJobsApp());

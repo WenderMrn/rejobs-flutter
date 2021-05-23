@@ -1,4 +1,4 @@
-import 'Job.dart';
+import 'job.dart';
 
 class ResponseJobs {
   String s0LegalNotice;

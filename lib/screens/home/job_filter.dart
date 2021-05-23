@@ -32,7 +32,7 @@ class _JobFilterState extends State<JobFilter> {
       child: TextField(
         controller: textController,
         decoration: InputDecoration(
-            labelText: "Search a job",
+            labelText: "Job title, keywords or company",
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(8.0)),
             ),
