@@ -60,7 +60,7 @@ class _HomeState extends State<HomeScreen> {
                 } else {
                   return SizedBox(
                     height: 30,
-                    width: 30,
+                    width: 40,
                     child: Center(
                       child: CircularProgressIndicator(),
                     ),

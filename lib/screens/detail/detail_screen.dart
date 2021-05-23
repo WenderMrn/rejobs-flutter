@@ -10,7 +10,7 @@ class DetailScreen extends StatelessWidget {
   Widget backButton(context) {
     return Positioned(
       left: 8.0,
-      top: 60.0,
+      top: 40.0,
       child: InkWell(
         onTap: () {
           Navigator.pop(context);
@@ -70,7 +70,7 @@ class DetailScreen extends StatelessWidget {
         createImage(job.companyLogoUrl),
         Container(
           width: 90.0,
-          child: new Divider(color: Colors.grey),
+          child: new Divider(color: Colors.teal[700]),
         ),
         SizedBox(height: 10.0),
         Text(
