@@ -86,28 +86,36 @@ class DetailScreen extends StatelessWidget {
     );
   }
 
+  Widget backgroundImage(context) {
+    return Container(
+        padding: EdgeInsets.only(left: 10.0),
+        height: 300,
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            image: new AssetImage("assets/meet.jpeg"),
+            fit: BoxFit.cover,
+          ),
+        ));
+  }
+
+  Widget backgroundColor(context) {
+    return Container(
+      height: 300,
+      padding: EdgeInsets.all(30.0),
+      width: MediaQuery.of(context).size.width,
+      decoration:
+          BoxDecoration(color: Color.fromRGBO(0, 128, 128, 0.8784313725490196)),
+      child: Center(
+        child: topContentText(context),
+      ),
+    );
+  }
+
   Widget topSection(context) {
     return Stack(
       children: <Widget>[
-        Container(
-            padding: EdgeInsets.only(left: 10.0),
-            height: MediaQuery.of(context).size.height * 0.5,
-            decoration: new BoxDecoration(
-              image: new DecorationImage(
-                image: new AssetImage("assets/meet.jpeg"),
-                fit: BoxFit.cover,
-              ),
-            )),
-        Container(
-          height: MediaQuery.of(context).size.height * 0.5,
-          padding: EdgeInsets.all(30.0),
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-              color: Color.fromRGBO(0, 128, 128, 0.8784313725490196)),
-          child: Center(
-            child: topContentText(context),
-          ),
-        ),
+        backgroundImage(context),
+        backgroundColor(context),
         backButton(context),
       ],
     );
@@ -115,7 +123,20 @@ class DetailScreen extends StatelessWidget {
 
   Widget bottomSection() {
     return Padding(
-        padding: EdgeInsets.all(10.0), child: Html(data: job.description));
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 20),
+                child: Text(
+                  job.getPublishDateFormatted(),
+                  textAlign: TextAlign.right,
+                  style: TextStyle(color: Colors.black54, fontSize: 15),
+                )),
+            Html(data: job.description)
+          ],
+        ));
   }
 
   @override
