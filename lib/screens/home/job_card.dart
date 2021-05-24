@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rejobs/models/job.dart';
-import 'package:rejobs/widgets/image_network.dart';
+import 'package:rejobs/widgets/create_image.dart';
 
 class JobCard extends StatelessWidget {
   final Job job;
@@ -65,7 +65,7 @@ class JobCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            ImageNetwork(imageUrl: job.companyLogoUrl),
+            CreateImage(imageUrl: job.companyLogoUrl),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

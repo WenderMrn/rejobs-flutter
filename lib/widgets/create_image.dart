@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ImageNetwork extends StatelessWidget {
+class CreateImage extends StatelessWidget {
   final String imageUrl;
 
-  ImageNetwork({Key key, @required this.imageUrl}) : super(key: key);
+  CreateImage({Key key, @required this.imageUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
