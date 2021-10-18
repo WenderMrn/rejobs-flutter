@@ -19,11 +19,11 @@ class JobService {
       Uri.https('remotive.io', "api/remote-jobs", params),
     );
 
-    if (response.statusCode == 200) {
-      return ResponseJobs.fromJson(jsonDecode(response.body));
-    } else {
+    if (response.statusCode != 200) {
       debugPrint(response.toString());
       throw Exception('Failed to load jobs');
     }
+
+    return ResponseJobs.fromJson(jsonDecode(response.body));
   }
 }
