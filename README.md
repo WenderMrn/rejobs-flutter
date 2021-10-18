@@ -1,16 +1,22 @@
-# rejobs
+# Rejobs APP
 
-A new Flutter application.
+A simple application to search for remote job offers
 
-## Getting Started
+## Dependecies
 
-This project is a starting point for a Flutter application.
+- flutter sdk: ">=2.7.0 <3.0.0"
+- flutter_html: ^2.0.0
 
-A few resources to get you started if this is your first Flutter project:
+## Project
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+This application aims to expose kotlin interface construction and API consumption.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Know more about flutter: https://flutter.dev/ 
+
+## Remote jobs API
+
+API used available at https://remotive.io/remote-jobs 
+
+![rejobs-list](https://user-images.githubusercontent.com/7337818/137776661-ec81587c-1d90-4ac5-8cfa-20c459568ee9.png)
+![rejobs-detail](https://user-images.githubusercontent.com/7337818/137776653-d26eac82-223c-425e-a7b6-7ce69b8dd361.png)
+
