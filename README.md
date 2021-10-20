@@ -9,7 +9,7 @@ A simple application to search for remote job offers
 
 ## Project
 
-This application aims to expose kotlin interface construction and API consumption.
+This application aims to expose flutter interface construction and API consumption.
 
 Know more about flutter: https://flutter.dev/ 
 
